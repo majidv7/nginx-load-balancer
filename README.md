@@ -7,17 +7,17 @@ I just tried it on Ubuntu servers!
 10.0.5.4 as main server(load balancer)
 10.0.5.5, 10.0.5.6 ubuntu servers
 ## Installation
-first, you need to install Nginx on all of these servers.
+First, you need to install Nginx on all of these servers.
 ```bash
 sudo apt update && sudo apt install nginx -y
 ```
-edit this file on the main server:
+Edit this file on the main server:
 
 ```bash
 sudo vim /etc/nginx/sites-available/default
 
 ```
-then comment on all the configurations of this file then add these lines to the end of the file:
+Comment on all the configurations of this file then add these lines to the end of the file
 
 ```bash
 upstream backend {
@@ -32,12 +32,12 @@ server {
                 proxy_pass http://backend;
         }
 ```
-restart the nginx service so hit this command:
+Restart the nginx service
 ```bash
 sudo systemctl restart nginx
 
 ```
-now let's head back to the Ubuntu servers and add the index.html:
+Let's head back to the Ubuntu servers and add the index.html
 * in server1
 ```bash
 cd /var/www/html
@@ -63,7 +63,7 @@ cd /var/www/html
 sudo vim index.html
 
 ```
-add this to the file
+Add this to the file
 
 ```bash
 <html>
