@@ -4,6 +4,7 @@ you just need three VMs for testing,
 I just tried it on Ubuntu servers!
 
 ## Here are the IPs I was using in this tutorial:
+### You should change the IPs with yours!
 10.0.5.4 as main server(load balancer)
 10.0.5.5, 10.0.5.6 ubuntu servers
 ## Installation
